@@ -29,9 +29,6 @@ body {
   font-size: 1.7rem;
   color: #e8dfca;
 }
-.nav-bar {
-  border-bottom: 1px solid black;
-}
 .nav-item {
   text-decoration: none;
   color: #e8dfca;

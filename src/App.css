@@ -7,7 +7,7 @@ body {
 }
 .grid-container {
   display: grid;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 90px 1fr;
 }
 .header-section {
   background: #1a4d2e;
@@ -35,6 +35,14 @@ body {
   margin: 3px 0 10px;
   font-size: 0.9rem;
 }
+.date-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  text-align: center;
+}
+
 @media screen and (min-width: 728px) {
   .nav-bar {
     justify-content: center;

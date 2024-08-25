@@ -7,7 +7,7 @@ body {
 }
 .grid-container {
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 80px 1fr;
 }
 .header-section {
   background: #1a4d2e;
@@ -28,9 +28,6 @@ body {
   margin: 2px 0 10px;
   font-size: 1.7rem;
   color: #e8dfca;
-}
-.nav-bar {
-  border-bottom: 1px solid black;
 }
 .nav-item {
   text-decoration: none;

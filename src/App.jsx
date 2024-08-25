@@ -25,7 +25,7 @@ const App = () => {
 
         <main className="main-section">
           <Routes>
-            <Route path="/" element={<CurrentDate />} />
+            <Route path="/age-calculator" element={<CurrentDate />} />
             <Route path="/solarCal" element={<SolarCal />} />
             <Route path="/christianCal" element={<ChristianCal />} />
           </Routes>

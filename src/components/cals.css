@@ -25,6 +25,7 @@
   outline: none;
   transition: box-shadow 0.15s;
   border-radius: 15px;
+  color: black;
 }
 .selector:focus {
   outline: 1px solid #4f6f52;

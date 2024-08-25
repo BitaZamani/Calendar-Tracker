@@ -55,10 +55,10 @@ const SolarCal = () => {
     );
   }
   const handleCalculate = (birthYear, birthMonth, birthDay) => () => {
+    setError("");
     let yearOfAge = currentYear - birthYear;
     let monthOfAge;
     let dayOfAge;
-    setError("");
     let firstMonth1 = 1;
     let countedDays1 = 0;
     let distanceFromToday;
@@ -98,21 +98,29 @@ const SolarCal = () => {
     if (birthDay != 0 && birthMonth != 0 && birthYear != "") {
       if (currentDay < birthDay) {
         let newMonth = currentMonth - 1;
+        console.log(newMonth);
         let newDay =
           Number(currentDay) + daysInMonth(currentMonth, currentYear);
         monthOfAge = newMonth - birthMonth;
         dayOfAge = newDay - birthDay;
+        console.log(newDay);
       } else {
         monthOfAge = currentMonth - birthMonth;
         dayOfAge = currentDay - birthDay;
       }
-      if (birthMonth > currentMonth) {
+      if (
+        birthMonth > currentMonth ||
+        (birthMonth == currentMonth && birthDay > currentDay)
+      ) {
         yearOfAge--;
         monthOfAge += 12;
       }
       let persianYearOfAge = yearOfAge.toLocaleString("fa-IR");
       let persianMonthOfAge = monthOfAge.toLocaleString("fa-IR");
       let persianDayOfAge = dayOfAge.toLocaleString("fa-IR");
+      console.log(persianDayOfAge);
+      console.log(persianMonthOfAge);
+      console.log(persianYearOfAge);
       if (
         currentYear < birthYear ||
         (currentYear == birthYear &&

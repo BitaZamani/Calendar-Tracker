@@ -109,7 +109,10 @@ const ChristianCal = () => {
         monthOfAge = currentMonth - birthMonth;
         dayOfAge = currentDay - birthDay;
       }
-      if (birthMonth > currentMonth) {
+      if (
+        birthMonth > currentMonth ||
+        (birthMonth == currentMonth && birthDay > currentDay)
+      ) {
         yearOfAge--;
         monthOfAge += 12;
       }

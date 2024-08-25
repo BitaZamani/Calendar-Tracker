@@ -7,6 +7,7 @@ import CurrentDate from "./components/currentDate";
 const App = () => {
   return (
     <div className="grid-container">
+      <CurrentDate />
       <Router>
         <header className="header-section">
           <h1 className="header-title vazirmatn-semibold">تاریخ و محاسبه سن</h1>

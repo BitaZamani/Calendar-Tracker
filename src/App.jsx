@@ -65,7 +65,7 @@ const App = () => {
             <Route path="/solarCal" element={<SolarCal />} />
             <Route path="/christianCal" element={<ChristianCal />} />
           </Routes>
-          <main className="date-container">
+          <section className="date-container">
             <p className="vazirmatn-regular">
               {persianWeekDay} {persianDay} {persianMonth} {persianYear}
             </p>
@@ -73,8 +73,7 @@ const App = () => {
             <p className="poppins-regular">
               {englishWeekDay} {englishMonth} {englishDay}, {englishYear}
             </p>
-          </main>
-          );
+          </section>
         </main>
       </Router>
     </div>

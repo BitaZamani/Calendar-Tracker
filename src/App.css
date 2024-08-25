@@ -7,11 +7,7 @@ body {
 }
 .grid-container {
   display: grid;
-<<<<<<< HEAD
   grid-template-rows: 90px 1fr;
-=======
-  grid-template-rows: 80px 1fr;
->>>>>>> 2c6aa7b96872ab7e257bba3432d48288e6ec4bc4
 }
 .header-section {
   background: #1a4d2e;

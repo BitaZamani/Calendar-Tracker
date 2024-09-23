@@ -1,6 +1,6 @@
 import "./App.css";
 import "./components/fonts.css";
-import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Link, Route, HashRouter as Router, Routes } from "react-router-dom";
 import ChristianCal from "./components/georgianCal";
 import SolarCal from "./components/solarCal";
 import CurrentDate from "./components/currentDate";
@@ -9,7 +9,7 @@ const App = () => {
     <div className="grid-container">
       <Router>
         <header className="header-section">
-          <h1 className="header-title vazirmatn-semibold">تاریخ و محاسبه سن</h1>
+          <h1 className="header-title vazirmatn-semibold">تقویم نگار</h1>
           <nav className="nav-bar">
             <Link className="nav-item vazirmatn-regular" to={"/"}>
               تاریخ امروز
@@ -28,7 +28,7 @@ const App = () => {
 
         <main className="main-section">
           <Routes>
-            <Route path="/Calendar-Trackert" element={<CurrentDate />} />
+            <Route path="/" element={<CurrentDate />} />
             <Route path="/Solar-Calendar" element={<SolarCal />} />
             <Route path="/Georgian-Calendar" element={<ChristianCal />} />
           </Routes>

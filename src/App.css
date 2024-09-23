@@ -34,7 +34,6 @@ body {
   margin: 3px 0 10px 10px;
   font-size: 0.9rem;
 }
-
 @media screen and (min-width: 728px) {
   .nav-bar {
     justify-content: center;

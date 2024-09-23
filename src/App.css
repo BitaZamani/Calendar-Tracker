@@ -2,12 +2,11 @@ body {
   margin: 0;
   padding: 0;
   background: #f5efe6;
-  max-height: 100vh;
   box-sizing: border-box;
 }
 .grid-container {
   display: grid;
-  grid-template-rows: 90px 1fr;
+  grid-template-rows: 95px 1fr;
 }
 .header-section {
   background: #1a4d2e;
@@ -32,7 +31,7 @@ body {
 .nav-item {
   text-decoration: none;
   color: #e8dfca;
-  margin: 3px 0 10px;
+  margin: 3px 0 10px 10px;
   font-size: 0.9rem;
 }
 

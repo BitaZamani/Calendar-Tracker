@@ -56,6 +56,11 @@ const SolarCal = () => {
   }
   const handleCalculate = (birthYear, birthMonth, birthDay) => () => {
     setError("");
+    setBirthDayCounter("");
+    setAge("");
+    if (birthYear < 1000) {
+      birthYear = birthYear.toString().padStart(4, "0");
+    }
     let yearOfAge = currentYear - birthYear;
     let monthOfAge;
     let dayOfAge;
@@ -120,7 +125,9 @@ const SolarCal = () => {
         currentYear < birthYear ||
         (currentYear == birthYear &&
           (currentMonth < birthMonth ||
-            (currentMonth == birthMonth && currentDay < birthDay)))
+            (currentMonth == birthMonth && currentDay < birthDay))) ||
+        birthYear < 0 ||
+        birthYear % 1 != 0
       ) {
         setError("تاریخ را درست وارد کنید.");
       } else if (yearOfAge == 0) {

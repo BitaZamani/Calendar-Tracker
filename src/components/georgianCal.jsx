@@ -72,6 +72,8 @@ const ChristianCal = () => {
     let monthOfAge;
     let dayOfAge;
     setError("");
+    setBirthDayCounter("");
+    setAge("");
     let firstMonth1 = 1;
     let countedDays1 = 0;
     let distanceFromToday;
@@ -120,7 +122,9 @@ const ChristianCal = () => {
         currentYear < birthYear ||
         (currentYear == birthYear &&
           (currentMonth < birthMonth ||
-            (currentMonth == birthMonth && currentDay < birthDay)))
+            (currentMonth == birthMonth && currentDay < birthDay))) ||
+        birthYear < 0 ||
+        birthYear % 1 != 0
       ) {
         setError("Please Enter The Date Correctly.");
       } else if (yearOfAge == 0) {

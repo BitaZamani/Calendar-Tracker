@@ -1,13 +1,12 @@
 import "./App.css";
 import "./components/fonts.css";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import ChristianCal from "./components/christianCal";
+import ChristianCal from "./components/georgianCal";
 import SolarCal from "./components/solarCal";
 import CurrentDate from "./components/currentDate";
 const App = () => {
   return (
     <div className="grid-container">
-      <CurrentDate />
       <Router>
         <header className="header-section">
           <h1 className="header-title vazirmatn-semibold">تاریخ و محاسبه سن</h1>
@@ -15,10 +14,13 @@ const App = () => {
             <Link className="nav-item vazirmatn-regular" to={"/"}>
               تاریخ امروز
             </Link>
-            <Link className="nav-item vazirmatn-regular" to={"/christianCal"}>
+            <Link
+              className="nav-item vazirmatn-regular"
+              to={"/Georgian-Calendar"}
+            >
               سن با تقویم میلادی
             </Link>
-            <Link className="nav-item vazirmatn-regular" to={"/solarCal"}>
+            <Link className="nav-item vazirmatn-regular" to={"/Solar-Calendar"}>
               سن با تقویم شمسی
             </Link>
           </nav>
@@ -26,9 +28,9 @@ const App = () => {
 
         <main className="main-section">
           <Routes>
-            <Route path="/" element={<CurrentDate />} />
-            <Route path="/solarCal" element={<SolarCal />} />
-            <Route path="/christianCal" element={<ChristianCal />} />
+            <Route path="/Calendar-Trackert" element={<CurrentDate />} />
+            <Route path="/Solar-Calendar" element={<SolarCal />} />
+            <Route path="/Georgian-Calendar" element={<ChristianCal />} />
           </Routes>
         </main>
       </Router>
